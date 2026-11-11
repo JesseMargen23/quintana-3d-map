@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quintana Private Pools | 3D Interactive Map</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="scene"></div>
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark">Q</span><div><strong>QUINTANA PRIVATE POOLS</strong><small>INTERACTIVE 3D RESORT MAP</small></div></div>
+        <div class="top-actions"><button id="dayBtn" class="mode-btn active">☀ Day</button><button id="nightBtn" class="mode-btn">☾ Night</button></div>
+      </div>
+      <div class="hint">Drag to rotate · Scroll to zoom · Click a pool or item to explore</div>
+      <aside class="panel" id="infoPanel">
+        <div class="panel-head"><div><span class="eyebrow">EXPLORE THE RESORT</span><h2 id="panelTitle">Resort Overview</h2></div><button id="closePanel" class="icon-btn" aria-label="Close panel">×</button></div>
+        <p id="panelDescription">Select one of the three sample pools on the map to view its information.</p>
+        <div id="poolDetails" class="details hidden">
+          <div class="detail-grid"><div><small>POOL SIZE</small><strong id="poolSize">—</strong></div><div><small>DEPTH</small><strong id="poolDepth">—</strong></div></div>
+          <div class="section-label">POOL FEATURES</div><div id="featureList" class="feature-list"></div>
+        </div>
+        <div class="section-label">SELECT AN ITEM TO HIGHLIGHT</div>
+        <div id="itemList" class="item-list"></div>
+        <button id="showAllBtn" class="secondary-btn">Show all three pools</button>
+        <p class="disclaimer">Sample visualization only. Layout, dimensions, depths, and facilities are illustrative and must be verified with the resort.</p>
+      </aside>
+      <button id="openPanel" class="panel-open-btn" type="button" aria-controls="infoPanel" aria-expanded="false">☰ Show information</button>
+      <div class="pool-switcher" id="poolSwitcher">
+        <button data-pool="pool1"><span class="pool-dot"></span><span><b>Pool 1</b><small>Family Pool</small></span></button>
+        <button data-pool="pool2"><span class="pool-dot"></span><span><b>Pool 2</b><small>Leisure Pool</small></span></button>
+        <button data-pool="pool3"><span class="pool-dot"></span><span><b>Pool 3</b><small>Kids Pool</small></span></button>
+      </div>
+      <div id="welcome" class="welcome">
+        <div class="welcome-card"><span class="welcome-kicker">WELCOME TO</span><h1>Quintana<br/><em>Private Pools</em></h1><p>Explore a sample 3D view of the resort, discover its three pools, and learn about the facilities around them.</p><button id="enterBtn">Explore the three pools <span>→</span></button><small>Interactive sample layout · Day & night view</small></div>
+      </div>
+      <div class="toast" id="toast"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
