@@ -39,9 +39,9 @@ box('Main walkway',2,.12,31,0,.02,0,mats.path);
 box('Entrance patio',10,.13,4,0,.04,15,mats.concrete);
 // Pools are intentionally arranged as a sample layout, not a surveyed resort plan.
 const pools = [
- {id:'pool1',name:'Pool 1',subtitle:'Pool 1',x:-11,z:-5,w:10,d:6,depth:'1.2 m – 1.5 m',size:'10 m × 6 m',features:['Wide swimming area','Poolside loungers','Shaded seating'],items:[['🛟','Life ring'],['🪑','Pool loungers'],['☂','Umbrella'],['🚿','Outdoor shower']]},
- {id:'pool2',name:'Pool 2',subtitle:'Pool 2',x:10,z:-5,w:11,d:7,depth:'1.2 m – 1.8 m',size:'11 m × 7 m',features:['Open leisure swimming','Poolside deck','Tropical landscaping'],items:[['🏀','Pool basketball hoop'],['🪑','Deck chairs'],['🛟','Life ring'],['🌴','Palm trees']]},
- {id:'pool3',name:'Pool 3',subtitle:'Pool 3',x:0,z:10,w:8,d:5,depth:'0.5 m – 0.8 m',size:'8 m × 5 m',features:['Shallow water area','Small slide','Family seating nearby'],items:[['🛝','Small slide'],['🦩','Pool float'],['🪑','Family bench'],['🚿','Outdoor shower']]}
+ {id:'pool1',name:'Pool 1',subtitle:'Pool 1',x:-11,z:-5,w:10,d:6,depth:'1.2 m – 1.5 m',price: '₱ 7,000',size:'10 m × 6 m',features:['Wide swimming area','Poolside loungers','Shaded seating'],items:[['🛟','Life ring'],['🪑','Pool loungers'],['☂','Umbrella'],['🚿','Outdoor shower']]},
+ {id:'pool2',name:'Pool 2',subtitle:'Pool 2',x:10,z:-5,w:11,d:7,depth:'1.2 m – 1.8 m',price: '₱ 6,000',size:'11 m × 7 m',features:['Open leisure swimming','Poolside deck','Tropical landscaping'],items:[['🏀','Pool basketball hoop'],['🪑','Deck chairs'],['🛟','Life ring'],['🌴','Palm trees']]},
+ {id:'pool3',name:'Pool 3',subtitle:'Pool 3',x:0,z:10,w:8,d:5,depth:'0.5 m – 0.8 m',price: '₱ 6,000',size:'8 m × 5 m',features:['Shallow water area','Small slide','Family seating nearby'],items:[['🛝','Small slide'],['🦩','Pool float'],['🪑','Family bench'],['🚿','Outdoor shower']]}
 ];
 const clickable=[]; const poolGroups={}; const itemObjects={};
 function addPool(p){const g=new THREE.Group();g.position.set(p.x,0,p.z);g.userData={type:'pool',poolId:p.id};resort.add(g);poolGroups[p.id]=g;
